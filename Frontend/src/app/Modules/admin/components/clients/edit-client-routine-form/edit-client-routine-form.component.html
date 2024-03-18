@@ -1,0 +1,338 @@
+<form [formGroup]="routineForm" novalidate (ngSubmit)="onSubmit()" optional>
+  <mat-card class="shipping-card">
+
+    <mat-card-header>
+      <mat-card-title>Daily Routines Details</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <h3><b>Mealtimes</b></h3>
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Feed Age appropriately" formControlName="feedAge">
+              <mat-option *ngFor="let item  of    selections" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Good appetite" formControlName="goodAppetitie">
+              <mat-option *ngFor="let item  of  selections" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Messy Eater" formControlName="messyEater">
+              <mat-option *ngFor="let item  of    selections" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Food Preference" formControlName="foodPreference">
+              <mat-option *ngFor="let item  of  selections" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Taste And Texture" formControlName="tasteAndTexture">
+              <mat-option *ngFor="let item  of  selections" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+        </div>
+      </div>
+
+
+      <h3><b>Dressing</b></h3>
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Age appropriate" formControlName="ageAppropriate">
+              <mat-option *ngFor="let item  of    selections" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Can do up buttons or laces" formControlName="canDoUpButtons">
+              <mat-option *ngFor="let item  of  selections" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Can put on socks" formControlName="canPutOnSocks">
+              <mat-option *ngFor="let item  of    selections" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Can put on shoes" formControlName="canPutOnShoes">
+              <mat-option *ngFor="let item  of  selections" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+
+      <h3>Toileting And Bath</h3>
+      <div class="row box">
+        <div class="col">
+          <mat-radio-group formControlName="toiletTrained">Is your child toilet trained?
+          <br>
+            <mat-radio-button value="true">Yes</mat-radio-button>
+            <mat-radio-button value="false">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+
+        <div class="col">
+          <mat-radio-group formControlName="dayAndNight">Day and Night
+            <br>
+            <mat-radio-button value="true">Yes</mat-radio-button>
+            <mat-radio-button value="false">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      <br>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-radio-group formControlName="accidents">Any accidents
+            <br>
+            <mat-radio-button value="true">Yes</mat-radio-button>
+            <mat-radio-button value="false">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+
+        <div class="col">
+          <mat-radio-group  formControlName="toiletPaperUse">Independence with toilet paper use cleaning
+            <br>
+            <mat-radio-button value="true">Yes</mat-radio-button>
+            <mat-radio-button value="false">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      <br>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-radio-group  formControlName="managingClothing">Independence with managing clothing
+            <br>
+            <mat-radio-button value="true">Yes</mat-radio-button>
+            <mat-radio-button value="false">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+
+        <div class="col">
+          <mat-radio-group formControlName="washingHands">Independence with washing hands
+            <br>
+            <mat-radio-button value="true">Yes</mat-radio-button>
+            <mat-radio-button value="false">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      <br>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-radio-group formControlName="bathingAndBrushing">Independence in bathing and brushing teeth
+            <br>
+            <mat-radio-button value="true">Yes</mat-radio-button>
+            <mat-radio-button value="false">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      <br>
+
+
+      <mat-card-title>Please describe the following routines:</mat-card-title>
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Typical Night's Sleep</mat-label>
+            <mat-select placeholder="Typical Night Sleep" formControlName="typicalNightSleep">
+              <mat-option *ngFor="let sleep of  sleeps" [value]="sleep.name">
+                {{ sleep.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Time of Sleep</mat-label>
+            <input type="time" matInput placeholder="Time of Sleep" formControlName="timeOfSleep" maxlength="150">
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Remarks(Max 150 characters)</mat-label>
+              <input matInput placeholder="Remarks" formControlName="remarksSleep" maxlength="150">
+            </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>A  typical wake up routine</mat-label>
+            <mat-select placeholder="A  typical wake up routine" formControlName="typicalWakeup">
+              <mat-option *ngFor="let item of  wakeup" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Time of Waking Up</mat-label>
+            <input type="time" matInput placeholder="Time of Waking Up" formControlName="timeOfWakeup" maxlength="150">
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Remarks(Max 150 characters)</mat-label>
+              <input matInput placeholder="Remarks" formControlName="remarksWakeUp" maxlength="150">
+            </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>If applicable, how does your child complete homework:</mat-label>
+            <mat-select placeholder="If applicable, how does your child complete homework:" formControlName="homework">
+              <mat-option *ngFor="let item of  homework" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Remarks(Max 150 characters)</mat-label>
+              <input matInput placeholder="Remarks"formControlName="remarksHomework" maxlength="150">
+            </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Please describe any routines strategies that help your child to function properly to focus/maintain attention span, calm down after being upset, stay self-regulated during the day, etc.(Max 150 characters)</mat-label>
+            <textarea matInput placeholder="Please describe any routines strategies that help your child to function properly to focus/maintain attention span, calm down after being upset, stay self-regulated during the day, etc." formControlName="routineStrategies" maxlength="150"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Describe the most difficult situation/Behaviour of your child during the day and how do you cope with it?(Max 150 characters)</mat-label>
+            <mat-select placeholder="Describe the most difficult situation/behaivour of your child during the day and how do you cope with it?" formControlName="difficultSituation">
+              <mat-option *ngFor="let item of  difficult" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Remarks(Max 150 characters)</mat-label>
+              <input matInput placeholder="Remarks" formControlName="remarksChildBehaviour" maxlength="150">
+            </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row box">
+        <div class="col">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>How can we be helpful to you and how did you come to know about us?(Max 150 characters)</mat-label>
+            <textarea matInput placeholder="How can we be helpful to you and how did you come to know about us?" formControlName="howYouKnowAboutUs" maxlength="150"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+
+    </mat-card-content>
+
+
+    <mat-card-actions>
+      <button  mat-raised-button color="primary" type="submit"  matStepperNext >UPDATE</button>
+    </mat-card-actions>
+
+  </mat-card>
+</form>

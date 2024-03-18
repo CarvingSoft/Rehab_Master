@@ -1,0 +1,15 @@
+<p>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>PARENT LOGIN</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <h3>Username: &nbsp;&nbsp; {{userName}}</h3>
+      <h3>Password: &nbsp;&nbsp; {{password}}</h3>
+      <button mat-button mat-dialog-close (click)="onCancelClick()" type="button">CANCEL</button>&nbsp;&nbsp;
+      <button mat-raised-button color="primary" type="button" (click)="onSubmit()" *ngIf="data.type != 'view'">ADD</button>
+    </mat-card-content>
+  </mat-card>
+
+

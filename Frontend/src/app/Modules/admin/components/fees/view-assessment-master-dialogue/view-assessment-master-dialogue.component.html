@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Session Details</h1>
+<div mat-dialog-content>
+  <b>Date: {{this.data.date | date: 'dd/MM/yyyy'}}</b>
+  <ul>
+    <li *ngIf="this.data.sessionStatus == 'Assessment'">Session Conducted By : {{this.data.assessment_id.therapistName.name}}</li>
+    <li *ngIf="this.data.sessionStatus == 'LeaveAssessment'">Session Conducted By : {{this.data.leave_session_id.therapistName.name}}</li>
+    <br>
+    <li>Session Fee: {{this.data.assessmentFee}}</li><br>
+    <!-- <li>Concession: {{this.data.concession}}</li><br>
+    <li>Session Type: {{this.data.sessionStatus}}</li><br> -->
+    <li>Assessment Master Id: {{this.data._id}}</li><br>
+  </ul>
+</div>
+
